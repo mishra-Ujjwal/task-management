@@ -1,6 +1,4 @@
-Live Demo
-Frontend: https://your-frontend-link.vercel.app
-Backend API: https://your-backend-link.onrender.com
+Live Demo:https://assignment-wb26.onrender.com/
 
 Demo Credentials:
 Email: ujjwal@gmail.com 
