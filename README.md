@@ -1,144 +1,118 @@
 Live Demo:https://assignment-wb26.onrender.com/
+# ✅ Task Management System (Personal Use)
 
-Demo Credentials:
-Email: ujjwal@gmail.com 
-Password: ujjwaltask
-
-# Task Management System
-
-A full-stack Task Tracker built with **React**, **Node.js + Express**, and **MongoDB**.
+A lightweight, productivity-focused task management system designed for personal workflow organization, prioritization, and daily execution.
 
 ---
 
-## Project Structure
+## 📌 Overview
 
+This is a **self-used productivity system** built to manage tasks, track progress, and maintain structured daily workflows.
+
+Unlike generic to-do apps, this system is tailored for **developer workflows and execution tracking**, focusing on simplicity, speed, and clarity.
+
+---
+
+## 🎯 Purpose
+
+* Organize daily and long-term tasks
+* Track progress and completion
+* Maintain consistency in execution
+* Reduce mental overhead by structuring work
+
+> Built for real usage, not just demonstration.
+
+---
+
+## ⚡ Key Features
+
+* 📝 **Task Creation & Management**
+  Add, update, and delete tasks with ease
+
+* 📊 **Status Tracking**
+  Manage tasks across stages like:
+
+  * Pending
+  * In Progress
+  * Completed
+
+* 🎯 **Priority System**
+  Focus on high-impact tasks first
+
+* 📅 **Daily Workflow Structuring**
+  Helps plan and execute tasks effectively
+
+* ⚡ **Minimal & Fast UI**
+  Built for quick interactions without distractions
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+React.js • Tailwind CSS
+
+**Backend**
+Node.js • Express.js
+
+**Database**
+MongoDB
+
+---
+
+## 📈 Impact
+
+* 📌 Improved personal productivity and task clarity
+* ⏱ Reduced time spent managing scattered tasks
+* 🎯 Better focus on high-priority work
+* 🧠 Structured daily workflow execution
+
+---
+
+## 🧠 System Flow
+
+```text id="y6v01h"
+Create Task → Assign Priority → Track Status → Complete → Review
 ```
-taskflow/
-├── backend/          # Express API
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
-└── frontend/         # React App
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   ├── context/
-    │   ├── hooks/
-    │   ├── pages/
-    │   └── utils/
-    └── package.json
-```
-
 ---
 
-## Features
+## 🚀 Installation & Setup
 
-### Core
-- JWT-based Authentication (Signup / Login)
-- Full CRUD for Tasks (Create, Read, Update, Delete)
-- Task fields: Title, Description, Status, Priority, Due Date
-- Mark task as complete (toggle)
-- Filter by status & priority
-- Search by title
-- Analytics dashboard (total, completed, pending, in-progress, overdue, completion %)
+```bash id="xh8h71"
+# Clone repository
+git clone https://github.com/mishra-Ujjwal/task-management.git
 
-### Bonus
-- Pagination (8 tasks per page)
-- Sorting (by created date, due date, priority, title) with asc/desc toggle
-- Fully responsive design (mobile-first)
-- Global error handling middleware
-- Optimized MongoDB indexes
+# Navigate to project
+cd task-manager
 
----
-
-## Setup
-
-### Prerequisites
-- Node.js v16+
-- MongoDB running locally (or MongoDB Atlas URI)
-
----
-
-### 1. Backend
-
-```bash
-cd backend
+# Install dependencies
 npm install
-cp .env.example .env
-# Edit .env with your values
+
+# Run project
 npm run dev
 ```
 
-**`.env` file:**
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/taskflow
-JWT_SECRET=your_super_secret_key_here
-JWT_EXPIRE=7d
-```
+---
 
-Backend runs on: `http://localhost:5000`
+## 🔐 Future Improvements
+
+* 🔔 Notifications & reminders
+* 📊 Productivity analytics
+* ☁️ Cloud sync / multi-device support
+* 🧩 Drag-and-drop task management
+* 📱 Mobile optimization
 
 ---
 
-### 2. Frontend
+## 🌐 Portfolio
 
-```bash
-cd frontend
-npm install
-npm start
-```
-
-Frontend runs on: `http://localhost:3000`
-
-> The frontend proxies API calls to `http://localhost:5000` via `package.json` `"proxy"` field.
+👉 https://mishra-ujjwal-portfolio.onrender.com/
 
 ---
 
-## API Reference
+## ⚡ Philosophy
 
-### Auth
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/signup` | Register new user |
-| POST | `/api/auth/login` | Login |
-| GET | `/api/auth/me` | Get current user |
-
-### Tasks (all require Bearer token)
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/tasks` | Get tasks (supports filters, sort, pagination) |
-| POST | `/api/tasks` | Create task |
-| GET | `/api/tasks/:id` | Get single task |
-| PUT | `/api/tasks/:id` | Update task |
-| DELETE | `/api/tasks/:id` | Delete task |
-| PATCH | `/api/tasks/:id/complete` | Toggle complete |
-
-**GET /api/tasks query params:**
-- `status` — `todo` | `in-progress` | `done`
-- `priority` — `low` | `medium` | `high`
-- `search` — search by title
-- `sortBy` — `createdAt` | `dueDate` | `priority` | `title`
-- `order` — `asc` | `desc`
-- `page` — page number (default 1)
-- `limit` — items per page (default 8, max 50)
-
-### Analytics (requires Bearer token)
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/analytics` | Get task analytics |
+> “Simple systems, executed consistently, create real productivity.”
 
 ---
 
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, React Router v6, Axios, CSS Modules |
-| Backend | Node.js, Express 4 |
-| Database | MongoDB with Mongoose |
-| Auth | JWT + bcryptjs |
-| Validation | express-validator |
